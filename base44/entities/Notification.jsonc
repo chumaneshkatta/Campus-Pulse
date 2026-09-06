@@ -1,0 +1,41 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "match_start",
+        "score_update",
+        "registration",
+        "announcement",
+        "schedule_change",
+        "followed_team",
+        "acwr_warning",
+        "workload_alert"
+      ],
+      "default": "announcement"
+    },
+    "isRead": {
+      "type": "boolean",
+      "default": false
+    },
+    "actionUrl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "userId",
+    "title",
+    "message"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "tournamentId": {
+      "type": "string"
+    },
+    "tournamentTitle": {
+      "type": "string"
+    },
+    "sport": {
+      "type": "string"
+    },
+    "matchType": {
+      "type": "string",
+      "enum": [
+        "college",
+        "community"
+      ],
+      "default": "college"
+    },
+    "homeTeamId": {
+      "type": "string"
+    },
+    "homeTeamName": {
+      "type": "string"
+    },
+    "awayTeamId": {
+      "type": "string"
+    },
+    "awayTeamName": {
+      "type": "string"
+    },
+    "homeTeamColor": {
+      "type": "string",
+      "default": "#1e40af"
+    },
+    "awayTeamColor": {
+      "type": "string",
+      "default": "#dc2626"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "scheduledDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "live",
+        "halftime",
+        "quarter_break",
+        "completed",
+        "postponed",
+        "cancelled"
+      ],
+      "default": "scheduled"
+    },
+    "homeScore": {
+      "type": "number",
+      "default": 0
+    },
+    "awayScore": {
+      "type": "number",
+      "default": 0
+    },
+    "currentPeriod": {
+      "type": "string",
+      "default": ""
+    },
+    "gameClock": {
+      "type": "string",
+      "default": ""
+    },
+    "streamUrl": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "minute": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "player": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event"
+        ]
+      },
+      "default": []
+    },
+    "winnerTeamId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sport",
+    "homeTeamName",
+    "awayTeamName",
+    "scheduledDate"
+  ]
+}

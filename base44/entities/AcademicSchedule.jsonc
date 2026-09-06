@@ -1,0 +1,47 @@
+{
+  "name": "AcademicSchedule",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "class",
+        "assignment",
+        "exam",
+        "deadline"
+      ],
+      "default": "class"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "scheduledDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration": {
+      "type": "number",
+      "default": 60
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "userId",
+    "title",
+    "scheduledDate"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Registration",
+  "type": "object",
+  "properties": {
+    "tournamentId": {
+      "type": "string"
+    },
+    "tournamentTitle": {
+      "type": "string"
+    },
+    "registrationType": {
+      "type": "string",
+      "enum": [
+        "individual",
+        "team"
+      ],
+      "default": "individual"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "teamId": {
+      "type": "string"
+    },
+    "teamName": {
+      "type": "string"
+    },
+    "roster": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "playerName": {
+            "type": "string"
+          },
+          "jerseyNumber": {
+            "type": "number"
+          },
+          "position": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "submitted",
+        "under_review",
+        "approved",
+        "rejected",
+        "cancelled"
+      ],
+      "default": "draft"
+    },
+    "registrationNumber": {
+      "type": "string"
+    },
+    "submittedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewNote": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tournamentId",
+    "registrationType",
+    "status"
+  ]
+}

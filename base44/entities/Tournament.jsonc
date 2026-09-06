@@ -1,0 +1,115 @@
+{
+  "name": "Tournament",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sport": {
+      "type": "string",
+      "enum": [
+        "Basketball",
+        "Football",
+        "Cricket",
+        "Volleyball",
+        "Badminton",
+        "Tennis",
+        "Hockey",
+        "Athletics",
+        "Kabaddi",
+        "Table Tennis"
+      ]
+    },
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "Inter-College",
+        "University",
+        "Community",
+        "Open League"
+      ],
+      "default": "Inter-College"
+    },
+    "organizer": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "registrationDeadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "rulesUrl": {
+      "type": "string"
+    },
+    "officialWebsite": {
+      "type": "string"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "streamUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "maxTeams": {
+      "type": "number",
+      "default": 16
+    },
+    "minRosterSize": {
+      "type": "number",
+      "default": 5
+    },
+    "maxRosterSize": {
+      "type": "number",
+      "default": 12
+    },
+    "teamCount": {
+      "type": "number",
+      "default": 0
+    },
+    "registrationStatus": {
+      "type": "string",
+      "enum": [
+        "open",
+        "closed",
+        "completed"
+      ],
+      "default": "open"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "live",
+        "completed"
+      ],
+      "default": "upcoming"
+    },
+    "bannerColor": {
+      "type": "string",
+      "default": "#0f172a"
+    }
+  },
+  "required": [
+    "title",
+    "sport",
+    "eventType",
+    "organizer",
+    "startDate"
+  ]
+}

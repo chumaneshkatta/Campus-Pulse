@@ -1,0 +1,51 @@
+{
+  "name": "PracticeSchedule",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "teamId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "practice",
+        "gym",
+        "team_meeting",
+        "recovery",
+        "match"
+      ],
+      "default": "practice"
+    },
+    "scheduledDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration": {
+      "type": "number",
+      "default": 90
+    },
+    "venue": {
+      "type": "string"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "userId",
+    "title",
+    "scheduledDate"
+  ]
+}

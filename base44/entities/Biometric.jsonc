@@ -1,0 +1,84 @@
+{
+  "name": "Biometric",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "trainingLoad": {
+      "type": "number",
+      "default": 0
+    },
+    "practiceDuration": {
+      "type": "number",
+      "default": 0
+    },
+    "sessionIntensity": {
+      "type": "number",
+      "default": 0
+    },
+    "heartRateAvg": {
+      "type": "number"
+    },
+    "distanceKm": {
+      "type": "number"
+    },
+    "sleepHours": {
+      "type": "number"
+    },
+    "recoveryScore": {
+      "type": "number"
+    },
+    "readinessScore": {
+      "type": "number",
+      "default": 75
+    },
+    "acuteLoad": {
+      "type": "number",
+      "default": 0
+    },
+    "chronicLoad": {
+      "type": "number",
+      "default": 0
+    },
+    "acwr": {
+      "type": "number",
+      "default": 1.0
+    },
+    "acwrStatus": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "caution",
+        "warning"
+      ],
+      "default": "normal"
+    },
+    "caloriesTarget": {
+      "type": "number"
+    },
+    "proteinTarget": {
+      "type": "number"
+    },
+    "carbsTarget": {
+      "type": "number"
+    },
+    "fatTarget": {
+      "type": "number"
+    },
+    "hydrationTarget": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "userId",
+    "date"
+  ]
+}
